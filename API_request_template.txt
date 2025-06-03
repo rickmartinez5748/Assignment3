@@ -1,0 +1,14 @@
+import urllib.request
+import json
+
+def get_iss_coordinates():
+   
+   url="http://api.open-notify.org/iss-now.json"
+   request=urllib.request.urlopen(url)
+   resul=json.loads(request.read())
+   
+   #Create here the variables from the json file
+   
+   
+   return #resturn here the variables for external use
+   

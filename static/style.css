@@ -1,0 +1,87 @@
+/* Base Styling */
+body {
+    background-color: #595959;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Layout container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px; /* Try reducing this to 20px or even 15px */
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+/* Column layout */
+.left-column,
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+    min-width: 300px;
+}
+
+/* ISS image center column */
+.center-image {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 320px;
+}
+
+.center-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Card-style sections */
+.card {
+    background-color: #20627c;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.card h2 {
+    color: white;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.card p {
+    color: white;
+    font-size: 1em;
+    margin: 10px 0 0 0;
+}
+
+/* Flag image styling */
+.card img {
+    margin-top: 10px;
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+    border: 2px solid #ffffff;
+}
+
+/* Responsive layout */
+@media (max-width: 1000px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .center-image {
+        order: -1;
+    }
+}

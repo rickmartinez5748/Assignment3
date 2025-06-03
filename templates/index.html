@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISS Information</title>
+</head>
+<body>
+    <img src="/static/images/img-01.jpg">
+    <div class="position">
+        <h2>THE CURRENT POSITION OF THE INTERNATIONAL SPACE SHUTTLE IS:</h2>
+        <p>
+            Latitude: {{ latitude }}<br>
+            Longitude:{{ longitude }}<br>
+            ({{latitude}},{{longitude}})
+
+        </p>
+    </div>
+
+    <div class="weather">
+        <h2>THE WEATHER UNDER THE INTERNATIONAL SPACE STATION RIGHT NOW IS:</h2>
+        <p>
+            Temperature: {{ temp_c }} °C<br>
+            Description:{{ description }}
+        </p>
+    </div>
+    <div class="info">
+        <h2>BELOW YOU WILL FIND SOME INFORMATION ABOUT THE COUNTRY UNDER THE ISS:</h2>
+        <p>
+            Country: {{ country_name }}<br>
+            Country Code:{{ country_code }}<br>
+            Capital: {{ capital }}<br>
+            Population: {{ population }}<br>
+            Region: {{ region }}<br>
+            Flag:<br>
+            {% if flag == "No flag to Show" %}
+                {{ flag }}
+            {% else %}
+                <img src="{{ flag }}">
+            {% endif %}
+        </p>
+    </div>
+
+    <div class="distance">
+        <h2>THE DISTANCE OF THE INTERNATIONAL SPACE STATION TO MY HOME IS:</h2>
+        <p>
+            {{ my_distance }} km
+        </p>
+    </div>
+
+
+</body>
+</html>
